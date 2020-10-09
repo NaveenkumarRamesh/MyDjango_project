@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <div class="jumbotron">
+            <h1> Welcome to school details page </h1>
+            <h2> School details:</h2>
+            <p> name:{{schools_detail.name}}</p>
+            <p> principal:{{schools_detail.principal}}</p>
+            <p> name:{{schools_detail.location}}</p>
+            <h3> students:</h3>
+
+            {% for student in schools_detail.students.all %}
+            <p> {{student.name}} who is {{student.age}} years old</p>
+            {% endfor %}
+
+            </div>
+            </ol>
+    </body>
+</html>

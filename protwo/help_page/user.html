@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+    <head>
+        <title>
+            Help
+        </title>
+        <link rel="stylesheet" href="{%static "css/django.css"%}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    </head>
+    <body>
+        <h1 style="color: rgb(83, 155, 184);"> here is user database!! </h1>
+        <div class="container">
+            <div class="jumbotron">
+                <form method="POST">
+                {{ form.as_p}}
+                {%csrf_token%}
+                <input type="submit" class="btn btn-primary" value='add'>
+            <!-- {% if userdb %}
+            {% for index in userdb %}
+            <li>
+                user Details
+                <ol>
+                    {{index.FirstName}}
+                </ol>
+                <ol>
+                    {{index.LastName}}
+                </ol>
+                <ol>
+                    {{index.Email}}
+                </ol>
+            </li>
+            {% endfor %}
+            {%else%}
+            <p> nothin to show </p>
+            {%endif%} -->
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

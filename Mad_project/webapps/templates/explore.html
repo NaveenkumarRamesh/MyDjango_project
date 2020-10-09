@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+<table>
+    <thead>
+        <th> Column </th>
+        <th> Data </th>
+    </thead>
+    {% for key,values in content.items %}
+    <tr>
+        <td>{{key}}</td>
+        <td>{{values}}</td>
+    </tr>
+    {%endfor%}
+</table>
+</div>
+{% endblock %}

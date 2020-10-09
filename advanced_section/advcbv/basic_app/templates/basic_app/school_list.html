@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+    </head>
+    <body>
+        <h1> Welcome to list of school </h1>
+    <ol>
+        {% for school in school_list %}
+        <h2><li><a href="{{school.id}}"> {{school.name}} </a></li></h2>
+        
+        {% endfor %}
+    </ol>
+    </body>
+</html>
+   
